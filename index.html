@@ -9,11 +9,22 @@
 </head>
 <body>
     <div id="App-nadpis">
-        <h1>{{ title_book }} - {{ author }} - {{ created }}</h1>
-        <button v-on:click="created++">Increase age of created</button>
-        <button @click="created--">Decrease age of created</button>
+        <div v-show="show_book">
+            <h1>{{ title_book }} - {{ author }} - {{ created }}</h1>
+            <button v-on:click="created++">Increase age of created</button>
+            <button @click="created--">Decrease age of created</button>
 
-        <button @click="changeTitle()">Change title</button>
+            <button @click="changeTitle()">Change title book</button>
+        </div>
+    
+        <button @click="hide_show_book()">
+            <span v-if="show_book">Hide book</span>
+            <span v-else>Show book</span>
+        </button>
+
+
+        <div v-show="show_book">Actually is book showing.</div>
+
     </div>
 
     <script src="app.js"></script>
