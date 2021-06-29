@@ -8,7 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
-    <h1>Hello world :)</h1>
+    <div id="App-nadpis">
+        <h1>{{ title_book }} - {{ author }} - {{ created }}</h1>
+        <button v-on:click="created++">Increase age of created</button>
+        <button @click="created--">Decrease age of created</button>
+
+        <button @click="changeTitle()">Change title</button>
+    </div>
 
     <script src="app.js"></script>
 </body>
