@@ -9,6 +9,8 @@
 </head>
 <body>
     <div id="App-nadpis">
+
+        <!--If over and over showing and hiding, I would use probably v-show like v-if-->
         <div v-show="show_book">
             <h1>{{ title_book }} - {{ author }} - {{ created }}</h1>
             <button v-on:click="created++">Increase age of created</button>
