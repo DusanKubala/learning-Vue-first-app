@@ -24,5 +24,10 @@ const app = new Vue({
             this.pos_x = e.offsetX
             this.pos_y = e.offsetY
         }
+    },
+    computed: {
+        filteredBooks(){
+            return this.books.filter((book) => book.isFav)
+        }
     }
 })

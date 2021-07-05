@@ -17,7 +17,7 @@
         <div v-show="show_book">
             
             <ul>
-                <li v-for="book in books" :class="{ fav: book.isFav }" @click="book.isFav = !book.isFav">
+                <li v-for="book in filteredBooks" :class="{ fav: book.isFav }" @click="book.isFav = !book.isFav">
                     <h1> {{ book.title_book }}</h1>
                     <p>{{ book.author }}</p>
                     <p>{{ book.created }}</p>
