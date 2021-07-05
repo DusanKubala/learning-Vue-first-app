@@ -3,9 +3,9 @@ const app = new Vue({
     data: {
         show_book: true,
         books: [
-            { title_book: 'Maly princ', author: 'Juraj Kurilla', created: 2000, img: 'Assets/1.jpg' },
-            { title_book: 'Maly princ', author: 'Juraj Kurilla', created: 1999, img: 'Assets/2.jpg' },
-            { title_book: 'Maly princ', author: 'Juraj Kurilla', created: 2002, img: 'Assets/3.jpg' }
+            { title_book: 'Maly princ', author: 'Juraj Kurilla', created: 2000, img: 'Assets/1.jpg', isFav: true },
+            { title_book: 'Maly princ', author: 'Juraj Kurilla', created: 1999, img: 'Assets/2.jpg', isFav: false },
+            { title_book: 'Maly princ', author: 'Juraj Kurilla', created: 2002, img: 'Assets/3.jpg', isFav: true }
         ],
         pos_x: 0,
         pos_y: 0
