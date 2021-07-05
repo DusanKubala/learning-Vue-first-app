@@ -17,15 +17,18 @@
         <div v-show="show_book">
             
             <ul>
-                <li v-for="book in books" :class="{ fav: book.isFav }">
+                <li v-for="book in books" :class="{ fav: book.isFav }" @click="book.isFav = !book.isFav">
                     <h1> {{ book.title_book }}</h1>
                     <p>{{ book.author }}</p>
                     <p>{{ book.created }}</p>
                     <img :src="book.img" :alt="book.title_book">
-                    <button v-on:click="book.created++">Increase age of created</button>
+                    
+                    
+                    
+                    <!--<button v-on:click="book.created++">Increase age of created</button>
                     <button @click="book.created--">Decrease age of created</button>
 
-                    <button @click="changeTitle()">Change title book</button>
+                    <button @click="changeTitle()">Change title book</button>-->
                 </li>
             </ul>
 
