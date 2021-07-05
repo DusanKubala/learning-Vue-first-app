@@ -6,6 +6,18 @@
     <title>Vue-1</title>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <style>
+        .box{
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: chartreuse;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
+
 </head>
 <body>
     <div id="App-nadpis">
@@ -26,6 +38,11 @@
 
 
         <div v-show="show_book">Actually is book showing.</div>
+
+        <div class="box" @mouseover="currentEvents($event)" >MouseOver</div>
+        <div class="box" @mouseleave="currentEvents($event)" >MouseLeave</div>
+        <div class="box" @dblclick="currentEvents($event, 5)" >MouseDb</div>
+        <div class="box" @mousemove="moveEventPosition($event)" >MouseMove - {{ pos_x }} {{ pos_y }}</div>
 
     </div>
 
